@@ -1,5 +1,5 @@
 import React from 'react'
-import { PLACES } from './House/page'
+import { PLACES } from './page'
 
 const Housecard: React.FC = () => {
   

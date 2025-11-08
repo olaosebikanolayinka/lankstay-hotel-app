@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
-import InputField from "../Login/Inputfield";
-import TextareaField from "../Login/TextArea";
+import { Eye, EyeOff} from "lucide-react";
+import Link from "next/link";
+import InputField from "../Components/Inputfield";
+import TextareaField from "../Components/TextArea";
 
 
 const Register: React.FC = () => {
@@ -58,17 +59,22 @@ const Register: React.FC = () => {
             <InputField label="Upload Documents" type="file" />
             <TextareaField label="Facilities" placeholder="Describe" />
 
+
+         <Link href="/login">
             <button
               type="submit"
               className="w-full py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
             >
               Register
             </button>
+            </Link>
+          
 
             <p className="text-center text-sm text-gray-600 mt-2">
-              <a href="#" className="text-blue-600 hover:underline">
+              <Link href="/login" className="text-blue-600">
+              
                 Login
-              </a>
+              </Link>
             </p>
           </form>
         </div>

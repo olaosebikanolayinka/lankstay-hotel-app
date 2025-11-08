@@ -26,7 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} latin`}>
 
-        <Navbar />
+
+
+        
       
    
         

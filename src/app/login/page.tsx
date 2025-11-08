@@ -1,17 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import InputField from "../Login/Inputfield";
-import TextareaField from "../Login/TextArea";
-import { Eye, EyeOff } from "lucide-react";
+import Link from 'next/link'
+import InputField from "../Components/Inputfield";
+import { Eye, EyeOff} from "lucide-react";
 
-const CreateAccount = () => {
+const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50  px-25 py-20">
-
-      <div
+    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50  px-25 py-20 rounded-2xl">
+        <div
   className="relative w-full md:w-1/2 h-56 sm:h-64 md:h-auto bg-cover bg-center flex items-center justify-center p-4 sm:p-8 md:p-10"
   style={{
     backgroundImage: "url('/verified-bg.png')",
@@ -25,7 +24,7 @@ const CreateAccount = () => {
 </div>
 
 
-      <div className="flex-1 flex items-center justify-center px-6 sm:px-10 md:px-12 lg:px-20 py-10 md:py-16 bg-white">
+    <div className="flex-1 flex items-center justify-center px-6 sm:px-10 md:px-12 lg:px-20 py-10 md:py-16 bg-white">
         <div className="w-full max-w-md sm:max-w-lg lg:max-w-md">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-8 text-center md:text-left">
             Create Account
@@ -33,13 +32,8 @@ const CreateAccount = () => {
 
           <form className="space-y-5">
        
-            <InputField label="Full Name" placeholder="Enter your full name" required />
-            <InputField label="Email" type="email" placeholder="name@gmail.com" required />
-            <InputField label="Telephone" type="tel" placeholder="With country code" />
-            <InputField label="Country" placeholder="Country name" />
             <InputField label="Username" placeholder="Choose a username" required/>
 
-     
             <div className="relative">
               <InputField
                 label="Password"
@@ -66,25 +60,27 @@ const CreateAccount = () => {
               </a>
               .
             </p>
-
+            
+            <Link href="../dashboard">
             <button
               type="submit"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 rounded-md transition"
             >
-              Register
+              Login
             </button>
+          </Link>
           </form>
 
-          <p className="mt-5 text-center text-sm text-gray-600">
-            Already have an account?{" "}
-            <a href="#" className="text-blue-600 hover:underline">
-              Login
+          
+            <a href="../register" className="text-blue-600 hover:text-[#152C5B] items-center justify-center flex mt-6">
+              Create Account
             </a>
-          </p>
-        </div>
-      </div>
+          
     </div>
+    </div>
+    </div>
+    
   );
-};
+}
 
-export default CreateAccount;
+export default LoginPage

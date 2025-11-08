@@ -1,4 +1,6 @@
+"use client";
 import React from 'react'
+import Link from 'next/link'
 
 const MostPicked = () => {
 
@@ -60,11 +62,13 @@ const MostPicked = () => {
             <div className='lg:col-span-2 flex justify-center'>
               <div className='w-full max-w-[920px]'>
                 <div className='relative rounded-2xl overflow-hidden shadow-lg group h-64 md:h-80 lg:h-[480px]'>
+            <Link href="/Details">
             <img
               src={places[0].image}
               alt={places[0].title}
               className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-300'
             />
+            </Link>
 
             <div className='absolute top-0 right-0 bg-blue-600 text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md'>
           {places[0].price}

@@ -1,4 +1,7 @@
 import React from 'react'
+import Footer from '../Components/Footer'
+import Navbar from '../Components/Navbar'
+import Link from 'next/link'
 
 
 const treasures = [
@@ -35,8 +38,10 @@ const treasures = [
 
 const DetailsPage = () => {
   return (
-    <div className='pt-20'>
-        <div className='flex flex-row gap-10 px-25'>
+    
+    <div className=''>
+      <Navbar />
+        <div className='flex flex-row gap-10 px-25 pt-10'>
             <div className='flex flex-row gap-90 justify-between items-center text-sm text-gray-600'>
                 <div className='flex flex-row gap-4'>
                 <p>Home</p>
@@ -92,10 +97,12 @@ const DetailsPage = () => {
           <p className='text-[#152C5B] font-bold'>Start Booking</p>
           <p> <span className='font-bold text-2xl text-[#1ABC9C]'>$200</span>  per Day</p>
 
+        <Link href="/login">
           <button className='bg-[#3252DF] text-white font-medium px-5 py-2 rounded-md hover:bg-[#152C5B] transition duration-300 ease-in-out flex items-center gap-2 w-[100%] justify-center'
       type='submit' >
         Book Now
     </button>
+    </Link>
 
         </div>
 
@@ -188,6 +195,8 @@ const DetailsPage = () => {
         ))}
       </div>
     </div>
+
+    <Footer />
     </div>
   )
 }
