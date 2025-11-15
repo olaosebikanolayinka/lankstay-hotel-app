@@ -3,10 +3,10 @@ import Button from './Button'
 
 const Hero = () => {
   return (
-  <div className='flex flex-col lg:flex-row justify-center items-start gap-10 mt-5 mb-20 w-full px-4 sm:px-6 lg:px-20 pt-10'>
-    <div className='flex flex-col justify-center items-start lg:items-start lg:w-1/2 px-4 sm:px-6 gap-6 sm:items-center sm:text-center sm:pt-4'>
-            <div className='flex flex-col justify-center items-center'>
-            <h1 className='lg:text-5xl font-extrabold leading-[1.5] text-[#152C5B] sm:text-4xl '>Forget Busy Work,
+  <div className='flex flex-col lg:flex-row justify-center items-start gap-8 md:gap-12 mt-5 mb-20 w-full px-4 sm:px-6 lg:px-20 pt-10'>
+    <div className='flex flex-col justify-center items-start lg:items-start lg:w-1/2 gap-6 pt-4 md:pt-6'>
+            <div className='flex flex-col justify-start md:justify-center items-start md:items-start'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold md:font-extrabold leading-[1.4] md:leading-[1.5] text-[#152C5B]'>Forget Busy Work,
                     Start Next Vacation
                     </h1>
          </div>
@@ -34,11 +34,19 @@ const Hero = () => {
         </div>
       </div>
         </div>
-  <div className='px-4 sm:px-6 relative lg:pr-10 pt-6 border-2 border-gray-900 rounded-3xl rounded-tl-[76px] w-full lg:w-1/2'>
-      <div className="absolute top-4 left-4  bg-black rounded-2xl shadow-md"></div>
-  <img className='rounded-tl-[76px] rounded-2xl relative w-full h-auto object-cover' src="/hero-image.png" alt="Hero-image banner" />  
-</div>
+  <div className="md:w-1/2 relative flex justify-center items-end pb-10">
+      {/* Background white card */}
+      <div className="absolute top-10 right-1 border-2 border-gray-500 w-[80%] h-[90%]  rounded-3xl shadow-lg"></div>
 
+      {/* Main image */}
+      <img
+       src="/hero-image.png"
+       alt="Vacation Room"
+       width={500}
+       height={420}
+       className="relative rounded-3xl object-cover shadow-xl rounded-tl-[80px]"
+      />
+    </div>
 
     </div>
   )

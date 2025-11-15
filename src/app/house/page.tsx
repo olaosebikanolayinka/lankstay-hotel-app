@@ -1,6 +1,9 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import Housecard from './Housecard'
 export const PLACES = [
   {
     id: 1,
@@ -69,15 +72,15 @@ export const PLACES = [
 
 const House = () => {
   return (
-    <section className="py-10 px-5 sm:px-8 md:px-12 lg:px-16 bg-white">
-      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#152C5B] mb-6">
+    <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-20 bg-white  mx-auto w-full">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#152C5B] mb-8 md:mb-10">
         Most Picked
       </h2>
 
       {/* GRID LAYOUT */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
         {PLACES.map((place) => (
-          <HouseCard key={place.id} place={place} />
+          <Housecard key={place.id} place={place} />
         ))}
       </div>
     </section>
@@ -90,27 +93,6 @@ type Place = {
   location: string
   image: string
   popular: boolean
-}
-
-const HouseCard: React.FC<{ place: Place }> = ({ place }) => {
-  return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden">
-      <img
-        src={place.image}
-        alt={place.title}
-        className="w-full h-40 object-cover"
-      />
-      <div className="p-4">
-        <h3 className="text-md font-medium text-gray-800">{place.title}</h3>
-        <p className="text-sm text-gray-500">{place.location}</p>
-        {place.popular && (
-          <span className="inline-block mt-2 text-xs bg-blue-600 text-white px-2 py-1 rounded">
-            Popular
-          </span>
-        )}
-      </div>
-    </article>
-  )
 }
 
 export default House

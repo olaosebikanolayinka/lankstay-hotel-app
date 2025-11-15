@@ -2,14 +2,10 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Poppins } from "next/font/google";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // choose the weights you need
-});
+// Removed next/font Poppins import: loading Poppins directly via Google Fonts in globals.css
 
 
 export const metadata: Metadata = {
@@ -24,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} latin`}>
+      <body className='latin'>
 
 
 

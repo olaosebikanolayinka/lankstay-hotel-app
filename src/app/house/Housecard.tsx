@@ -1,30 +1,42 @@
 import React from 'react'
-import { PLACES } from './page'
 
-const Housecard: React.FC = () => {
-  
-  const items = PLACES.slice(0, 4);
+interface Place {
+  id: number
+  title: string
+  location: string
+  image: string
+  popular: boolean
+}
 
+interface HousecardProps {
+  place: Place
+}
+
+const Housecard: React.FC<HousecardProps> = ({ place }) => {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <div className="grid grid-cols-2 gap-1">
-        {items.map((p) => (
-          <img
-            key={p.id}
-            src={p.image}
-            alt={p.title}
-            className="w-full h-32 object-cover"
-          />
-        ))}
+    <article className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+
+      <div className="relative w-full h-40 sm:h-48 md:h-56 overflow-hidden">
+        {/* Popular Choice badge for id 1 and 8 */}
+        {(place.id === 1 || place.id === 8) && (
+          <span className="absolute top-0 right-0 z-10 bg-[#3252DF] text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-bl-2xl shadow-lg">
+            Popular Choice
+          </span>
+        )}
+        <img
+          src={place.image}
+          alt={place.title}
+          className={`${place.id === 1 ? 'w-3/4 mx-auto' : 'w-full'} h-full object-cover hover:scale-105 transition-transform duration-300`}
+        />
       </div>
 
-      <div className="p-4">
-        <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800">
-          {items[0].title}
+      <div className="p-3 sm:p-4 md:p-5">
+        <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 truncate">
+          {place.title}
         </h3>
-        <p className="text-sm sm:text-base text-gray-500">{items[0].location}</p>
+        <p className="text-xs sm:text-sm text-gray-500 truncate">{place.location}</p>
       </div>
-    </div>
+    </article>
   )
 }
 
