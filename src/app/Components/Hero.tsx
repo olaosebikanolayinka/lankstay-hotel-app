@@ -5,6 +5,7 @@ const Hero = () => {
   return (
   <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 md:gap-12 mt-5 mb-20 w-full px-4 sm:px-6 lg:px-20 pt-10'>
     <div className='flex flex-col justify-center items-center lg:items-start lg:w-1/2 gap-6 pt-4 md:pt-6'>
+    {/* left side text write up*/}
             <div className='flex flex-col justify-start md:justify-center items-center md:items-start'>
             <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold md:font-extrabold leading-[1.4] md:leading-[1.5] text-[#152C5B] text-center lg:text-left'>Forget Busy Work,
                     Start Next Vacation
