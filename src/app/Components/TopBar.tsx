@@ -17,7 +17,8 @@ const TopBar = ({ toggleSidebar }: TopbarProps) => {
           <Menu className="w-6 h-6 text-gray-700" />
         </button>
 
-        <div>
+        {/* hide greeting on extra-small screens to free space for profile on right */}
+        <div className="hidden sm:block">
           <h2 className="text-lg text-gray-600">Hello, Salman</h2>
           <p className="text-xs text-gray-900">Have a nice day </p>
         </div>
@@ -34,11 +35,17 @@ const TopBar = ({ toggleSidebar }: TopbarProps) => {
           <img
             src="/saleem.png"
             alt="Profile"
-            className="w-10 h-10 rounded-full border border-gray-200 object-cover"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-gray-200 object-cover"
           />
-          <div className="hidden sm:block text-sm">
+
+          {/* show profile details on small+ screens and shrink text on xs */}
+          <div className="text-sm hidden xs:block sm:block md:block lg:block">
             <p className="font-medium text-gray-800">Salman Faris</p>
             <p className="text-gray-500 text-xs">Admin</p>
+          </div>
+          {/* Alternative for extremely small devices: keep a small name visible */}
+          <div className="text-sm block xs:hidden sm:hidden md:hidden lg:hidden">
+            <p className="font-medium text-gray-800 text-[12px]">Salman</p>
           </div>
         </div>
       </div>

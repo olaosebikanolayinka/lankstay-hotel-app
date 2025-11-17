@@ -41,7 +41,7 @@ export default function BookingsPage() {
               <input
                 type="text"
                 placeholder="Search documents"
-                className="pl-9 pr-12 py-3 w-full bg-white rounded-lg text-sm text-gray-700 border border-gray-200 focus:ring-2 focus:ring-[#3252DF] outline-none"
+                className="pl-9 pr-12 py-2 sm:py-3 w-full bg-white rounded-lg text-sm text-gray-700 border border-gray-200 focus:ring-2 focus:ring-[#3252DF] outline-none"
               />
               
             </div>
@@ -58,33 +58,33 @@ export default function BookingsPage() {
           {/* Toolbar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
             {/* Action Icons */}
-            <div className="flex items-center gap-3  p-2">
-              <button className="p-2 hover:bg-gray-100 rounded border-2 border-gray-200 px-4 py-4">
+            <div className="flex items-center gap-2 p-1 sm:p-2">
+              <button className="p-2 sm:p-2 hover:bg-gray-100 rounded border-2 border-gray-200 sm:px-4 sm:py-4 px-2 py-2">
                 <FileText className="w-4 h-4 text-blue-600" />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded border-2 border-gray-200 px-4 py-4">
+              <button className="p-2 sm:p-2 hover:bg-gray-100 rounded border-2 border-gray-200 sm:px-4 sm:py-4 px-2 py-2">
                 <LayoutGrid className="w-4 h-4 text-blue-600 " />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded border-2 border-gray-200 px-4 py-4">
+              <button className="p-2 sm:p-2 hover:bg-gray-100 rounded border-2 border-gray-200 sm:px-4 sm:py-4 px-2 py-2">
                 <Table className="w-4 h-4 text-blue-600" />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded border-2 border-gray-200 px-4 py-4">
+              <button className="p-2 sm:p-2 hover:bg-gray-100 rounded border-2 border-gray-200 sm:px-4 sm:py-4 px-2 py-2">
                 <Printer className="w-4 h-4 text-blue-600" />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded border-2 border-gray-200 px-4 py-4">
+              <button className="p-2 sm:p-2 hover:bg-gray-100 rounded border-2 border-gray-200 sm:px-4 sm:py-4 px-2 py-2">
                 <Trash2 className="w-4 h-4 text-blue-600" />
               </button>
             </div>
 
             {/* Filters + Add Button */}
-            <div className="flex items-center gap-4">
-              <select className="border border-gray-300  px-7 py-2 text-sm text-gray-700 bg-white focus:ring-2 focus:ring-[#3252DF] outline-none">
+            <div className="flex items-center gap-3 flex-wrap">
+              <select className="border border-gray-300 px-3 sm:px-6 py-2 text-sm text-gray-700 bg-white focus:ring-2 focus:ring-[#3252DF] outline-none">
                 <option>This Month</option>
                 <option>Last Month</option>
                 <option>This Year</option>
               </select>
 
-              <select className="border border-gray-300  px-7 py-2 text-sm text-gray-700 bg-white focus:ring-2 focus:ring-[#3252DF] outline-none">
+              <select className="border border-gray-300 px-3 sm:px-6 py-2 text-sm text-gray-700 bg-white focus:ring-2 focus:ring-[#3252DF] outline-none">
                 <option>Booking</option>
                 <option>Completed</option>
                 <option>Pending</option>
@@ -97,7 +97,7 @@ export default function BookingsPage() {
           </div>
 
           {/* List Section */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-gray-100">
             <h3 className="text-lg font-semibold text-gray-800">
               List of Hotel Rooms
             </h3>
@@ -105,7 +105,8 @@ export default function BookingsPage() {
               Lorem ipsum lorem wujuhn
             </p>
 
-            <table className="min-w-full text-sm text-left">
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-sm text-left">
               <tbody>
                 {rooms.map((room, i) => (
                   <tr
@@ -136,6 +137,7 @@ export default function BookingsPage() {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </section>
       </main>
