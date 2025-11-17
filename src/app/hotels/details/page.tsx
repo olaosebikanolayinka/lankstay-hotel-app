@@ -22,7 +22,7 @@ const treasures = [
     id: 3,
     name: "Labour and Wait",
     category: "Shopping",
-    image: "/labour and wait.png",
+    image: "/labour-wait.png",
     popular: true,
   },
   {
