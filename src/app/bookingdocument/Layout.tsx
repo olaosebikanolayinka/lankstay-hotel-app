@@ -1,7 +1,7 @@
 "use client"
 
-import Sidebar from "../Components/SideBar";
-import Topbar from "../Components/TopBar";
+import Sidebar from "../components/SideBar";
+import Topbar from "../components/TopBar";
 import { useState } from "react";
 
 

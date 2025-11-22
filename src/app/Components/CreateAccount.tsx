@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import InputField from "../Components/Inputfield";
-import TextareaField from "../Components/TextArea";
+import InputField from "./Inputfield";
+import TextareaField from "./TextArea";
 import { Eye, EyeOff } from "lucide-react";
 
 const CreateAccount = () => {

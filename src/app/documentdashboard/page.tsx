@@ -2,8 +2,8 @@
 
 import { Search, Filter, LayoutGrid, Table, Printer, Trash2, FileText, Edit, Plus } from "lucide-react";
 import { useState } from "react";
-import Sidebar from "../Components/SideBar";
-import Topbar from "../Components/TopBar";
+import Sidebar from "../components/SideBar";
+import Topbar from "../components/TopBar";
 
 export default function BookingsPage() {
   const [isOpen, setIsOpen] = useState(false);

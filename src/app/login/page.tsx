@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Link from 'next/link'
-import InputField from "../Components/Inputfield";
+import InputField from "../components/Inputfield";
 import { Eye, EyeOff} from "lucide-react";
-import Modal from "../Components/Modal";
-import AccountCreated from "../Components/AccountCreated";
+import Modal from "../components/Modal";
+import AccountCreated from "../components/AccountCreated";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
