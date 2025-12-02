@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import { useState } from 'react';
-import Button from '../componentsss/Button';
+import Button from '../components/Button';
 import Link from 'next/link';
 
 const BookingPage = () => {

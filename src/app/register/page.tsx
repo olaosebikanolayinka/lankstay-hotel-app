@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import { Eye, EyeOff} from "lucide-react";
 import Link from "next/link";
-import InputField from "../componentsss/Inputfield";
-import TextareaField from "../componentsss/TextArea";
-import Modal from "../componentsss/Modal";
-import AccountCreated from "../componentsss/AccountCreated";
+import InputField from "../components/Inputfield";
+import TextareaField from "../components/TextArea";
+import Modal from "../components/Modal";
+import AccountCreated from "../components/AccountCreated";
 
 
 const Register: React.FC = () => {

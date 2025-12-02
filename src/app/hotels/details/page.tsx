@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../../componentsss/Footer'
-import Navbar from '../../componentsss/Navbar'
+import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 
 const treasures = [

@@ -1,17 +1,17 @@
-import Hero from "./componentsss/Hero";
-import Footer from "./componentsss/Footer";
-import MostPicked from "./componentsss/MostPicked";
-import Search from "./componentsss/Search";
-import RoomRegisterPage from "./componentsss/RoomRegisterPage";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import MostPicked from "./components/MostPicked";
+import Search from "./components/Search";
+import RoomRegisterPage from "./components/RoomRegisterPage";
 import Housecard from "./house/layout";
 import BookingPage from "./paymentpage1/page";
 import DocumentDashboard from "./documentdashboard/page";
 import DocumentLayout from "./documentdashboard/Layout";
-import Dashboard from "./dashboardss/page";
+import Dashboard from "./dashboard/page";
 import Bookingdocument from "./bookingdocument/page";
 import { Link } from "lucide-react";
-import Button from "./componentsss/Button";
-import Navbar from "./componentsss/Navbar";
+import Button from "./components/Button";
+import Navbar from "./components/Navbar";
 import House from "./house/page";
 
 

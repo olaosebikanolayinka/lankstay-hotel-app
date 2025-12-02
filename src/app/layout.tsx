@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import Navbar from "./componentsss/Navbar";
-import Footer from "./componentsss/Footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Removed next/font Poppins import: loading Poppins directly via Google Fonts in globals.css
 

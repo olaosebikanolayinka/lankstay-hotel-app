@@ -12,10 +12,10 @@ import {
   Plus,
 } from "lucide-react";
 import { useState } from "react";
-import Sidebar from "../componentsss/SideBar";
-import Topbar from "../componentsss/TopBar";
+import Sidebar from "../components/SideBar";
+import Topbar from "../components/TopBar";
 import Link from "next/link";
-import Button from "../componentsss/Button";
+import Button from "../components/Button";
 
 export default function BookingsPage() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
-import HotelOwners from "../componentsss/HotelOwners";
-import Sidebar from "../componentsss/SideBar";
-import Topbar from "../componentsss/TopBar";
+import HotelOwners from "../components/HotelOwners";
+import Sidebar from "../components/SideBar";
+import Topbar from "../components/TopBar";
 import { useState } from "react";
 
 

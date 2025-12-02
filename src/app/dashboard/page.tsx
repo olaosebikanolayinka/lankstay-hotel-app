@@ -1,7 +1,7 @@
 "use client";
-import Sidebar from "../componentsss/SideBar";
-import HotelOwners from "../componentsss/HotelOwners";
-import Topbar from "../componentsss/TopBar";
+import Sidebar from "../components/SideBar";
+import HotelOwners from "../components/HotelOwners";
+import Topbar from "../components/TopBar";
 
 import { Search, Plus } from "lucide-react";
 import { useState } from "react";
